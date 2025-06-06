@@ -9,13 +9,20 @@ decimal d = 400.85m;
 int b = default;
 bool tf = default;
 
-Console.WriteLine($"{a}, {b}, {tf}, {c}, {f}, {d}");
+// Console.WriteLine($"{a}, {b}, {tf}, {c}, {f}, {d}");
 
 // TODO: implicit type conversion
+// Console.WriteLine($"{c + a}");
+// Console.WriteLine($"{(char)(c + a)}");
+// Console.WriteLine($"{f + a}");
+// Console.WriteLine($"{f + c}");
+
 
 
 // TODO: Create an instance of a struct (which is a value type)
-
+s s1;
+s1.a = 5;
+s1.b = false;
 
 // Perform an operation on a struct
 void StructOp(s theStruct) {
@@ -30,8 +37,10 @@ void StructOp(s theStruct) {
 // StructOp(s1);
 // Console.WriteLine($"{s1.a}, {s1.b}");
 
-// TODO: Create an object instance of a class (which is a reference type)
 
+
+// TODO: Create an object instance of a class (which is a reference type)
+MyClass cl = new MyClass { a = 5, b = false};
 
 // Perform an operation on the class
 void ClassOp(MyClass theClass) {
@@ -41,14 +50,17 @@ void ClassOp(MyClass theClass) {
     Console.WriteLine($"{theClass.a}, {theClass.b}");
 }
 
-// Console.WriteLine("Objects are passed by reference, since they are reference types:");
-// Console.WriteLine($"{cl.a}, {cl.b}");
-// ClassOp(cl);
-// Console.WriteLine($"{cl.a}, {cl.b}");
+Console.WriteLine("Objects are passed by reference, since they are reference types:");
+Console.WriteLine($"{cl.a}, {cl.b}");
+ClassOp(cl);
+Console.WriteLine($"{cl.a}, {cl.b}");
+
+
 
 // These are declared at the bottom of the file because C# requires
 // top-level statements to come before type declarations
-class MyClass {
+class MyClass
+{
     public int a;
     public bool b;
 }
