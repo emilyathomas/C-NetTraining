@@ -1,0 +1,10 @@
+---- Results: ----
+Total Files: 12
+Excel Files: 4
+Word Files: 5
+PowerPoint Files: 3
+----
+Total Size: 2,674,311
+Excel Size: 74,262
+World Size: 1,196,567
+PowerPoint Size: 1,403,482
